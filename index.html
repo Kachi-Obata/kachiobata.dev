@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Onyelukachukwu Obata (also known as Kachi) showcasing front-end development skills, web accessibility expertise.">
+    <meta name="keywords" content="Onyelukachukwu Obata, Kachi, Front-end Developer, Web Accessibility, Search Engine Optimization, SEO, Portfolio">
+    <title>Onyelukachukwu Obata's Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap">
+    <link rel="stylesheet" href="Landing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" sizes="16x16" href="images/code_transparent_favicon-16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="images/code_transparent_favicon-32.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/code_transparent_favicon-180.png">
+
+</head>
+<body>
+    <header>
+        <div class="logo">Onyelukachukwu Obata</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Portfolio</a>
+            <a href="#contact" class="contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="overlay">
+            <img src="images/profile.jpg" alt="Onyelukachukwu Obata - Front End Developer" class="profile-pic" loading="lazy">
+            <h1 class="logo-name">Onyelukachukwu Obata</h1>
+            <p class="logo-name">Second-Year Computer Science Major</p>
+            <button class="sign-up" onclick="location.href='#contact'">Send an email</button>
+        </div>
+    </section>
+
+    
+    <div class="video-background">
+        <!--
+        <video autoplay loop muted playsinline loading="lazy">
+            <source src="images/background_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video> -->
+        <div class="video-overlay"></div>
+    </div>
+
+    <section id="about" class="content_paragraph">
+        <h2>ABOUT ME</h2>
+        <p>My name is Onyelukachukwu (Kachi) Obata.</p>
+        <p>I am a Second Year Computer Science Student at Babcock University.</p>
+        <p>I am also an avid golfer.</p>
+        <p>My current goal is to build as many projects as possible, while exploring internship and/or mentorship opportunities to gain real world experience for when I leave school.</p>
+        <p>As well as build up my currently scanty Résumé into a CV.</p>
+        <a href="Resume - Kachi.pdf" download class="resume-download">Download My Résumé</a>
+    </section>
+
+    <section id="skills" class="content">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+           <!-- <li>REACT</li> -->
+           <!--<li>Node.js</li> -->
+           <!--<li>SQL</li> -->
+           <!--<li>Python</li> -->
+            <li>Web Accessibility</li>
+            <li>Responsive Web Design</li>
+            <li>SEO (Search Engine Optimization)</li>
+            <!-- <li>Website Administration</li> -->
+            <!-- <li>Web Hosting</li> -->
+            <!-- <li>Quality Assurance</li> -->
+        </ul>
+    </section>
+
+    <section id="projects" class="content">
+
+        <!--Slideshow rotation-->
+        
+
+        <h2 class="center-heading">PROJECTS</h2>
+        <!-- <div class="project">
+            <img src="images/Portfolio created.jpg" alt="University Portfolio Project showcasing front-end development skills" loading="lazy">
+            <p>Created a website Portfolio for a university project.</p>
+        </div> -->
+        <div class="project">
+            <img src="images/ICFNL-Website.jpg" alt="Rebuilt the Website for the International Center for Nigeria Law" loading="lazy">
+            <p>Rebuilt the website for the International Center for Nigeria Law.</p>
+        </div>
+        <div class="project">
+            <p>More Projects Coming Soon...</p>
+        </div>
+    </section>
+    <footer>
+    <section id="contact" class="content">
+        <h2 class="center-heading">Contact Me</h2>
+        <div class="contact-info">
+    <a href="mailto:kachiobata@gmail.com" aria-label="Email Kachi Obata" title="Email Me">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+    </a>
+    <a href="tel:+2348092226795" title="Call Me">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/onyelukachukwu-obata" rel="noopener" target="_blank" title="Visit my LinkedIn profile">
+        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+    </a>
+    <a href="https://github.com/Kachi-Obata" rel="noopener" target="_blank" title="Visit my GitHub profile">
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
+    </a>
+</div>
+</footer>
+
+        <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Back to Top</button>
+        <button id="read-aloud" onclick="readAloud()">Read Aloud</button>
+    </section>
+
+    <script>
+        const backToTopButton = document.getElementById('back-to-top');
+        const readAloudButton = document.getElementById('read-aloud');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = 'block';
+                readAloudButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+                readAloudButton.style.display = 'none';
+            }
+        });
+
+        function readAloud() {
+            const content = document.body.innerText;
+            const utterance = new SpeechSynthesisUtterance(content);
+            window.speechSynthesis.speak(utterance);
+        }
+    </script>
+</body>
+</html>
